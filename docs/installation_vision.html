@@ -89,6 +89,7 @@ rosdep update
 <p>In order to setup environment variables, append the following to <cite>~/.bashrc</cite></p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Sourcing ROS environment variables</span>
 <span class="nb">source</span> /opt/ros/kinetic/setup.bash
+. ~/.bashrc
 </pre></div>
 </div>
 </div>
@@ -98,11 +99,14 @@ rosdep update
 <div class="highlight-bash"><div class="highlight"><pre><span></span>mkdir -p ~/catkin_ws/src
 <span class="nb">cd</span> ~/catkin_ws/src
 catkin_init_workspace
+<span class="nb">cd</span> ..
+catkin_make
 </pre></div>
 </div>
 <p>Also, in order to setup environment variables, append the following to <cite>~/.bashrc</cite>. Make sure to adapt to your usage if you don&#8217;t create the workspace in the <cite>~/catkin_ws</cite> directory.</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Sourcing catkin environment variables</span>
 <span class="nb">source</span> ~/catkin_ws/devel/setup.sh
+. ~/.bashrc
 </pre></div>
 </div>
 </div>
@@ -113,6 +117,10 @@ catkin_init_workspace
 sudo cp /opt/ros/kinetic/lib/pkgconfig/opencv-3.2.0-dev.pc /opt/ros/kinetic/lib/pkgconfig/opencv.pc
 </pre></div>
 </div>
+</div>
+<div class="section" id="install-v4l-control-panel">
+<h2>Install V4l Control Panel<a class="headerlink" href="#install-v4l-control-panel" title="Permalink to this headline">¶</a></h2>
+<p>Finally install V4lCP, which can be downloaded <a class="reference external" href="https://apps.ubuntu.com/cat/applications/oneiric/v4l2ucp/">here</a>, just click on <cite>available on the Software Center</cite> and follow system instructions to install from Ubuntu Store.</p>
 <p>Now that enviroment is set, go ahead and Compile vision code, go to <a class="reference internal" href="compile_vision.html"><span class="doc">Compilation</span></a></p>
 <p class="rubric">Notes</p>
 <table class="docutils footnote" frame="void" id="ubuntunote" rules="none">
@@ -149,6 +157,7 @@ sudo cp /opt/ros/kinetic/lib/pkgconfig/opencv-3.2.0-dev.pc /opt/ros/kinetic/lib/
 <li><a class="reference internal" href="#installing-ros">Installing ROS </a></li>
 <li><a class="reference internal" href="#configuring-catkin-workspace">Configuring catkin workspace</a></li>
 <li><a class="reference internal" href="#install-opencv">Install OpenCV</a></li>
+<li><a class="reference internal" href="#install-v4l-control-panel">Install V4l Control Panel</a></li>
 </ul>
 </li>
 </ul>

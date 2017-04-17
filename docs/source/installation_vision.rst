@@ -60,6 +60,7 @@ In order to setup environment variables, append the following to `~/.bashrc`
     
     # Sourcing ROS environment variables
     source /opt/ros/kinetic/setup.bash
+    . ~/.bashrc
 
 Configuring catkin workspace
 """""""""""""""""""""""""""""
@@ -70,6 +71,8 @@ ROS recommends the usage of catkin for building it's packages. In order to achie
     mkdir -p ~/catkin_ws/src
     cd ~/catkin_ws/src
     catkin_init_workspace
+    cd ..
+    catkin_make
 
 Also, in order to setup environment variables, append the following to `~/.bashrc`. Make sure to adapt to your usage if you don't create the workspace in the `~/catkin_ws` directory.
 
@@ -77,6 +80,7 @@ Also, in order to setup environment variables, append the following to `~/.bashr
 
     # Sourcing catkin environment variables
     source ~/catkin_ws/devel/setup.sh
+    . ~/.bashrc
 
 Install OpenCV
 """""""""""""""
@@ -89,7 +93,12 @@ On ROS Kinetic the OpenCV library its already installed, all you need to do is s
     export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/ros/kinetic/lib/pkgconfig
     sudo cp /opt/ros/kinetic/lib/pkgconfig/opencv-3.2.0-dev.pc /opt/ros/kinetic/lib/pkgconfig/opencv.pc
 
+Install V4l Control Panel
+""""""""""""""""""""""""""""""
+Finally install V4lCP, which can be downloaded `here <https://apps.ubuntu.com/cat/applications/oneiric/v4l2ucp/>`_, just click on `available on the Software Center` and follow system instructions to install from Ubuntu Store.
+
 Now that enviroment is set, go ahead and Compile vision code, go to :doc:`compile_vision`
+
 
 
 .. rubric:: Notes
