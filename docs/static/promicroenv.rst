@@ -16,7 +16,7 @@ Next install arduino IDE:
     ~/Downloads$ cd arduino-1.6.13
     ~/Downloads/arduino-1.6.13$ ./install.sh
 
-Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching from Arduino.
+Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching for `Arduino`.
 
 Let's install pro micro board on our arduino IDE
 
