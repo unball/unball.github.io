@@ -15,6 +15,11 @@ Next install arduino IDE:
     ~/Downloads$ tar -xvJf arduino-1.6.13-linux64.tar.xz 
     ~/Downloads$ cd arduino-1.6.13
     ~/Downloads/arduino-1.6.13$ ./install.sh
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni
+    sudo usermod -a -G tty $(whoami)
+    sudo usermod -a -G dialout $(whoami)
+
+Log off and log on again for the changes to take effect!
 
 Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching for `Arduino`.
 

@@ -51,8 +51,12 @@
 ~/Downloads$ tar -xvJf arduino-1.6.13-linux64.tar.xz
 ~/Downloads$ <span class="nb">cd</span> arduino-1.6.13
 ~/Downloads/arduino-1.6.13$ ./install.sh
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib/jni
+sudo usermod -a -G tty <span class="k">$(</span>whoami<span class="k">)</span>
+sudo usermod -a -G dialout <span class="k">$(</span>whoami<span class="k">)</span>
 </pre></div>
 </div>
+<p>Log off and log on again for the changes to take effect!</p>
 <p>Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching for <cite>Arduino</cite>.</p>
 <p>Let&#8217;s install pro micro board on our arduino IDE</p>
 <p>Firts you’ll need to point the Arduino IDE board manager to a custom URL. Open up Arduino, then go to the Preferences (File &gt; Preferences). Then, towards the bottom of the window, paste this URL into the “Additional Board Manager URLs” text box:</p>
