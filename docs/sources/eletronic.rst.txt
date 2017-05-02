@@ -5,7 +5,7 @@ Eletronic Tutorials
 
 .. toctree::
     :maxdepth: 1
-    :Caption: Eletronic
+    :caption: Eletronic
 
     ProMicro Enviroment Setting <promicroenv>
     
