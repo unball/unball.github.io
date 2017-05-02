@@ -3,7 +3,7 @@
 Installing Arduino IDE
 """"""""""""""""""""""""
 
-Go to `Arduino Download Site <https://www.arduino.cc/download_handler.php?f=/arduino-1.6.13-linux64.tar.xz>`_, choose `Just Download (unless you want to donate)`.
+
 
 Next install arduino IDE:
 
