@@ -9,5 +9,5 @@ Welcome to UnBall's documentation!
    :caption: Modules
    
    Vision Module <vision>
-
+   Eletronic <eletronic>
 

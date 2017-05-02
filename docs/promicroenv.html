@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to UnBall’s documentation! &#8212; UnBall 2.0 documentation</title>
+    <title>Installing Arduino IDE &#8212; UnBall 2.0 documentation</title>
     
     <link rel="stylesheet" href="static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -26,7 +26,6 @@
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Vision Module" href="vision.html" />
    
   <link rel="stylesheet" href="static/custom.css" type="text/css" />
   
@@ -42,21 +41,30 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-unball-s-documentation">
-<h1>Welcome to UnBall&#8217;s documentation!<a class="headerlink" href="#welcome-to-unball-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Modules</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="vision.html">Vision Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation_vision.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compile_vision.html">Compiling vision code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="running_vision.html">Running code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fw_vision.html">Understanding the Vision&#8217;s Framework</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="promicroenv.html">ProMicro Enviroment Setting</a></li>
-</ul>
+  <div class="section" id="installing-arduino-ide">
+<span id="promicroenv"></span><h1>Installing Arduino IDE<a class="headerlink" href="#installing-arduino-ide" title="Permalink to this headline">¶</a></h1>
+<p>Go to <a class="reference external" href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.13-linux64.tar.xz">Arduino Download Site</a>, choose <cite>Linux 64bits</cite>.</p>
+<p>Next install arduino IDE:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># considering you&#39;d saved your .tar on Downloads:</span>
+~$ <span class="nb">cd</span> ~/Downloads/
+~/Downloads$ tar -xvJf arduino-1.6.13-linux64.tar.xz
+~/Downloads$ <span class="nb">cd</span> arduino-1.6.13
+~/Downloads/arduino-1.6.13$ ./install.sh
+</pre></div>
 </div>
+<p>Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching from Arduino.</p>
+<p>Let&#8217;s install pro micro board on our arduino IDE</p>
+<p>Firts you’ll need to point the Arduino IDE board manager to a custom URL. Open up Arduino, then go to the Preferences (File &gt; Preferences). Then, towards the bottom of the window, paste this URL into the “Additional Board Manager URLs” text box:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json
+</pre></div>
+</div>
+<img alt="images/arduino_sett.png" src="images/arduino_sett.png" />
+<p>Click OK. Then open the Board Manager by clicking Tools, then hovering over the Board selection tab and clicking Board Manager.</p>
+<img alt="images/boardManager.png" src="images/boardManager.png" />
+<p>Search for ‘sparkfun’ in the Board Manager. You should see the SparkFun AVR Boards package appear. Click install, wait a few moments, and all the .brd files you’ll need should be installed, indicated by the blue ‘Installed’ that is printed next to the package.</p>
+<img alt="images/SFEAVR.png" src="images/SFEAVR.png" />
+<p>You should now be able to upload code to a number of SparkFun Arduino-compatible products, including the Fio and the Pro Micro.</p>
+<img alt="images/SFEBoards.png" src="images/SFEBoards.png" />
 </div>
 
 
@@ -67,15 +75,14 @@
         <div class="sphinxsidebarwrapper"><div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="vision.html" title="next chapter">Vision Module</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="sources/index.rst.txt"
+      <li><a href="sources/promicroenv.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -101,7 +108,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="sources/index.rst.txt"
+      <a href="sources/promicroenv.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
