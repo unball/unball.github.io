@@ -7,7 +7,6 @@ Go to `Arduino Download Site <https://www.arduino.cc/download_handler.php?f=/ard
 
 Next install arduino IDE:
 
-
 .. code-block:: bash
     
     # considering you'd saved your .tar on Downloads:
