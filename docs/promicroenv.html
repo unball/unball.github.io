@@ -47,13 +47,13 @@
 <p>Go to <a class="reference external" href="https://www.arduino.cc/download_handler.php?f=/arduino-1.6.13-linux64.tar.xz">Arduino Download Site</a>, choose <cite>Just Download (unless you want to donate)</cite>.</p>
 <p>Next install arduino IDE:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># considering you&#39;d saved your .tar on Downloads:</span>
-~$ <span class="nb">cd</span> ~/Downloads/
+~$ <span class="nb">cd</span> Downloads/
 ~/Downloads$ tar -xvJf arduino-1.6.13-linux64.tar.xz
 ~/Downloads$ <span class="nb">cd</span> arduino-1.6.13
 ~/Downloads/arduino-1.6.13$ ./install.sh
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib/jni
-sudo usermod -a -G tty <span class="k">$(</span>whoami<span class="k">)</span>
-sudo usermod -a -G dialout <span class="k">$(</span>whoami<span class="k">)</span>
+~/Downloads/arduino-1.6.13$ <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/lib/jni
+~/Downloads/arduino-1.6.13$ sudo usermod -a -G tty <span class="k">$(</span>whoami<span class="k">)</span>
+~/Downloads/arduino-1.6.13$ sudo usermod -a -G dialout <span class="k">$(</span>whoami<span class="k">)</span>
 </pre></div>
 </div>
 <p>Log off and log on again for the changes to take effect!</p>

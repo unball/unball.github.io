@@ -10,13 +10,13 @@ Next install arduino IDE:
 .. code-block:: bash
     
     # considering you'd saved your .tar on Downloads:
-    ~$ cd ~/Downloads/
+    ~$ cd Downloads/
     ~/Downloads$ tar -xvJf arduino-1.6.13-linux64.tar.xz 
     ~/Downloads$ cd arduino-1.6.13
     ~/Downloads/arduino-1.6.13$ ./install.sh
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni
-    sudo usermod -a -G tty $(whoami)
-    sudo usermod -a -G dialout $(whoami)
+    ~/Downloads/arduino-1.6.13$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni
+    ~/Downloads/arduino-1.6.13$ sudo usermod -a -G tty $(whoami)
+    ~/Downloads/arduino-1.6.13$ sudo usermod -a -G dialout $(whoami)
 
 Log off and log on again for the changes to take effect!
 
