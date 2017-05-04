@@ -26,6 +26,7 @@
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Eletronic Tutorials" href="eletronic.html" />
     <link rel="prev" title="Running Vision" href="running_vision.html" />
    
   <link rel="stylesheet" href="static/custom.css" type="text/css" />
@@ -44,6 +45,78 @@
             
   <div class="section" id="framework">
 <span id="fw-vision"></span><h1>FrameWork<a class="headerlink" href="#framework" title="Permalink to this headline">¶</a></h1>
+<p>The vision system used by the <a class="reference external" href="https://github.com/unball">unball</a>
+team uses its own computer vision framework.
+This page provides information about how this framework works and how to use it.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="about-the-framework">
+<h2>About the framework<a class="headerlink" href="#about-the-framework" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of the framework is to provide a simple, highly customizable
+interface for the implementation of multiple object tracking algorithms.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>The framework consists of three steps: segmentation, identification and tracking
+. Both the segmentation and identification steps work by keeping lists of
+implemented algorithms. These algorithms are to be implemented by the user,
+and may be vastly different. The framework requires only that they follow a
+determined structure, that will be described ahead. This structure is,
+of course, extensible.</p>
+<dl class="docutils">
+<dt>The <em>segmentation</em> step requires an algorithm that operates on the raw image given</dt>
+<dd>to the framework, and produces another image as the output.</dd>
+</dl>
+<p>The <em>identification</em> step requires an algorithm that operates on the output of a
+segmentation algorithm, and produces information about the object(s) whose
+position(s) are being identified.</p>
+<p>In the tracking step each tracked object takes the results from a given
+identification algorithm and uses it to track itself.</p>
+<p>The information about each object (the algorithms it uses) is stored in a
+configuration file, <code class="docutils literal"><span class="pre">vision.yaml</span></code>. This file follows a predefined structure,
+that is described in detail on the next section.</p>
+</div>
+<div class="section" id="how-to-use-it">
+<h2>How to use it<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-a-segmentation-algorithm">
+<h3>Creating a segmentation algorithm:<a class="headerlink" href="#creating-a-segmentation-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>In order to create a segmentation algorithm, you need to create a class that
+contains the algorithm&#8217;s implementation. This class has the following
+requirements:</p>
+<ol class="arabic simple">
+<li>It needs to publicly inherit from the base class SegmentationAlgorithm</li>
+<li>It needs to declare its own type, within its public members, using the macro <code class="docutils literal"><span class="pre">ALGORITHM_TYPE</span></code>;</li>
+<li>It needs to register itself as a segmentation algorithm, within its private members, using the macro <code class="docutils literal"><span class="pre">REGISTER_ALGORITHM_DEC</span></code>;</li>
+<li>It needs to complete the self-registration using the macro <code class="docutils literal"><span class="pre">REGISTER_ALGORITHM_DEF</span></code> on the class&#8217; <code class="docutils literal"><span class="pre">.cpp</span></code> file.</li>
+<li>It needs to implement the <code class="docutils literal"><span class="pre">void</span> <span class="pre">run()</span></code> public method.</li>
+<li>It needs to write its output to the <code class="docutils literal"><span class="pre">cv::Mat</span> <span class="pre">output_image_</span></code> field.</li>
+</ol>
+<p>If the algorithm requires any logic prior to its continuous execution in the
+<code class="docutils literal"><span class="pre">run()</span></code> method, the class may implement the <code class="docutils literal"><span class="pre">void</span> <span class="pre">init()</span></code> public method.
+The class should not implement a constructor.</p>
+</div>
+<div class="section" id="creating-an-identification-algorithm">
+<h3>Creating an identification algorithm:<a class="headerlink" href="#creating-an-identification-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>In order to create an identification algorithm, you need to create
+a class to contain the algorithm&#8217;s implementation.
+This class has the following requirements:</p>
+<ol class="arabic simple">
+<li>It needs to publicly inherit from the base class IdentificationAlgorithm;</li>
+<li>It needs to declare its own type, within its <strong>public</strong> members, using the macro <code class="docutils literal"><span class="pre">ALGORITHM_TYPE</span></code>;</li>
+<li>It needs to register itself as a segmentation algorithm, within its <strong>private</strong> members, using the macro <code class="docutils literal"><span class="pre">REGISTER_ALGORITHM_DEC</span></code>;</li>
+<li>It needs to complete the self-registration using the macro <code class="docutils literal"><span class="pre">REGISTER_ALGORITHM_DEF</span></code> on the class&#8217; <code class="docutils literal"><span class="pre">.cpp</span></code> file.</li>
+<li>It needs to implement the <code class="docutils literal"><span class="pre">void</span> <span class="pre">run()</span></code> <strong>public</strong> method.</li>
+<li>It needs to write its output to the <code class="docutils literal"><span class="pre">std::shared_ptr&lt;IdentificationOutput&gt;</span> <span class="pre">output_info_</span></code> field.</li>
+</ol>
+<p>Like the segmentation class , if the identification algorithm requires any
+logic prior to its continuous execution in the <code class="docutils literal"><span class="pre">run()</span></code> method,
+the class may implement the <code class="docutils literal"><span class="pre">void</span> <span class="pre">init()</span></code> <strong>public</strong> method.
+The class should <strong>not</strong> implement a constructor.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -51,12 +124,28 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FrameWork</a><ul>
+<li><a class="reference internal" href="#about-the-framework">About the framework</a></li>
+<li><a class="reference internal" href="#how-it-works">How it works</a></li>
+<li><a class="reference internal" href="#how-to-use-it">How to use it</a><ul>
+<li><a class="reference internal" href="#creating-a-segmentation-algorithm">Creating a segmentation algorithm:</a></li>
+<li><a class="reference internal" href="#creating-an-identification-algorithm">Creating an identification algorithm:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="vision.html">Vision Module</a><ul>
       <li>Previous: <a href="running_vision.html" title="previous chapter">Running Vision</a></li>
+      <li>Next: <a href="eletronic.html" title="next chapter">Eletronic Tutorials</a></li>
   </ul></li>
   </ul></li>
 </ul>

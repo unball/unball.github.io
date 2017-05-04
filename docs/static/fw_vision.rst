@@ -3,3 +3,88 @@
 FrameWork
 ==========
 
+The vision system used by the `unball <https://github.com/unball>`_
+team uses its own computer vision framework.
+This page provides information about how this framework works and how to use it.
+
+.. toctree::
+  :maxdepth: 1
+  :numbered:
+
+  About
+  How it works
+  How to use it
+  Examples
+
+
+About the framework
+"""""""""""""""""""
+
+The purpose of the framework is to provide a simple, highly customizable
+interface for the implementation of multiple object tracking algorithms.
+
+How it works
+""""""""""""""""""""
+The framework consists of three steps: segmentation, identification and tracking
+. Both the segmentation and identification steps work by keeping lists of
+implemented algorithms. These algorithms are to be implemented by the user,
+and may be vastly different. The framework requires only that they follow a
+determined structure, that will be described ahead. This structure is,
+of course, extensible.
+
+The *segmentation* step requires an algorithm that operates on the raw image given
+ to the framework, and produces another image as the output.
+
+The *identification* step requires an algorithm that operates on the output of a
+segmentation algorithm, and produces information about the object(s) whose
+position(s) are being identified.
+
+In the tracking step each tracked object takes the results from a given
+identification algorithm and uses it to track itself.
+
+The information about each object (the algorithms it uses) is stored in a
+configuration file, ``vision.yaml``. This file follows a predefined structure,
+that is described in detail on the next section.
+
+How to use it
+""""""""""""""""""""
+
+Creating a segmentation algorithm:
+-----------------------------------
+In order to create a segmentation algorithm, you need to create a class that
+contains the algorithm's implementation. This class has the following
+requirements:
+
+#. It needs to publicly inherit from the base class SegmentationAlgorithm
+#. It needs to declare its own type, within its public members, using the macro ``ALGORITHM_TYPE``;
+#. It needs to register itself as a segmentation algorithm, within its private members, using the macro ``REGISTER_ALGORITHM_DEC``;
+#. It needs to complete the self-registration using the macro ``REGISTER_ALGORITHM_DEF`` on the class' ``.cpp`` file.
+#. It needs to implement the ``void run()`` public method.
+#. It needs to write its output to the ``cv::Mat output_image_`` field.
+
+If the algorithm requires any logic prior to its continuous execution in the
+``run()`` method, the class may implement the ``void init()`` public method.
+The class should not implement a constructor.
+
+Creating an identification algorithm:
+--------------------------------------
+
+In order to create an identification algorithm, you need to create
+a class to contain the algorithm's implementation.
+This class has the following requirements:
+
+#. It needs to publicly inherit from the base class IdentificationAlgorithm;
+#. It needs to declare its own type, within its **public** members, using the macro ``ALGORITHM_TYPE``;
+#. It needs to register itself as a segmentation algorithm, within its **private** members, using the macro ``REGISTER_ALGORITHM_DEC``;
+#. It needs to complete the self-registration using the macro ``REGISTER_ALGORITHM_DEF`` on the class' ``.cpp`` file.
+#. It needs to implement the ``void run()`` **public** method.
+#. It needs to write its output to the ``std::shared_ptr<IdentificationOutput> output_info_`` field.
+
+
+Like the segmentation class , if the identification algorithm requires any
+logic prior to its continuous execution in the ``run()`` method,
+the class may implement the ``void init()`` **public** method.
+The class should **not** implement a constructor.
+
+Examples
+""""""""""""""""""""
