@@ -18,7 +18,7 @@ Next install arduino IDE:
     ~/Downloads/arduino-1.6.13$ sudo usermod -a -G tty $(whoami)
     ~/Downloads/arduino-1.6.13$ sudo usermod -a -G dialout $(whoami)
 
-Once Ubuntu's ``modemmanager`` uses same port that Arduino Pro Micro, it's necessary to remove it from system:
+Once Ubuntu's ``modemmanager`` uses same port that Arduino Pro Micro, so it's necessary to remove it from system:
 
 .. code-block:: bash
 
