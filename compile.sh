@@ -9,6 +9,3 @@ mv docs html
 cd html; make html
 cd ..
 mv html docs
-git add .
-git commit
-git push

@@ -11,11 +11,6 @@ This page provides information about how this framework works and how to use it.
   :maxdepth: 1
   :numbered:
 
-  About
-  How it works
-  How to use it
-  Examples
-
 
 About the framework
 """""""""""""""""""

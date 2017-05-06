@@ -21,6 +21,7 @@ Next install arduino IDE:
 Once Ubuntu's ``modemmanager`` uses same port that Arduino Pro Micro, it's necessary to remove it from system:
 
 .. code-block:: bash
+
 	~$ sudo apt purge modemmanager
 
 Log off and log on again for the changes to take effect!
