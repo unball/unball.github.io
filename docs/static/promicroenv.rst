@@ -18,6 +18,11 @@ Next install arduino IDE:
     ~/Downloads/arduino-1.6.13$ sudo usermod -a -G tty $(whoami)
     ~/Downloads/arduino-1.6.13$ sudo usermod -a -G dialout $(whoami)
 
+Once Ubuntu's ``modemmanager`` uses same port that Arduino Pro Micro, it's necessary to remove it from system:
+
+.. code-block:: bash
+	~$ sudo apt purge modemmanager
+
 Log off and log on again for the changes to take effect!
 
 Now you have Arduino IDE on your pc, it can be accesed from unity menu by justing searching for `Arduino`.
