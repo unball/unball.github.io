@@ -9,7 +9,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
   border-color: #F05F40;
@@ -50,6 +50,7 @@ p {
   color: white;
 }
 .text-faded {
+  text-align: justify;
   color: rgba(255, 255, 255, 0.7);
 }
 section {
