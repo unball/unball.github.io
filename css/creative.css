@@ -415,3 +415,11 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+.inscricao{
+  border:3px solid #F05F40;
+  background-color:#F05F40;
+  border-radius:25px;
+  padding: 10px 10px;
+  font-family:'Open Sans';
+  color:white;
+}
