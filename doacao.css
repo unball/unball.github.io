@@ -1,5 +1,9 @@
 body{
     background-image: url("IMG_4042.jpg");
+    backgroung-attachment: fixed;
+    background-size: 100%;
+    Background-repeat: no-repeat;
+    background-color: black;
 }
 h1{
     background-color: #F05F40;
