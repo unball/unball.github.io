@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("IMG_4042.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+}
+h1{
+    background-color: #F05F40;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    opacity: 0.80;
+    width: 250px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px auto;
+    /*box-shadow: 1px 1px 30px black;*/
+  }
+.botao{
+    background-color: White;
+    color:black;
+    font-family: Arial;
+    text-align: center;
+    padding: 15px;
+    width: 30px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px black;
+    border: 3px outset white;
+    margin: 10px 10px;
+}
+  
