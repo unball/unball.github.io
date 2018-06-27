@@ -5,6 +5,9 @@ body{
     Background-repeat: no-repeat;
     background-color: black;
 }
+.letra{
+    color: white;
+}
 h1{
     background-color: #F05F40;
     color: white;
