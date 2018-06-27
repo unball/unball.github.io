@@ -7,6 +7,7 @@ body{
 }
 .letra{
     color: white;
+    opacity: 1;
 }
 h1{
     background-color: #F05F40;
