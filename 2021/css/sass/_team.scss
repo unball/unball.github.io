@@ -1,0 +1,40 @@
+.team-title {
+    display: block;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em auto;
+    @include d(m) {
+        flex-wrap: wrap;
+    }
+    @include d(s) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team-member {
+    text-align: center;
+    margin: 1em auto;
+    p {
+        font-size: 0.875em;
+    }
+    .member-name {
+        font-size: 2em;
+        margin: 0.5em 0;
+    }
+}
+
+.team-capitain {
+    h4::before {
+        content: 'Capitã';
+        color: $secundary-color;
+        font-size: 1.125em;
+        display: block;
+    }
+}

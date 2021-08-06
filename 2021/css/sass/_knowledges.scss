@@ -1,0 +1,22 @@
+.knowledges-title {
+    font-size: 4em;
+    margin: 0 auto;
+    max-width: fit-content;
+    margin-bottom: 40px;
+}
+
+.knowledges-item {
+    text-align: center;
+    margin-bottom: 3em;
+
+    .img-container {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    h4 {
+        font-size: 1.5em;
+        margin: 20px 0 20px 0;
+        height: 3em;
+    }
+}

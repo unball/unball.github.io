@@ -1,0 +1,33 @@
+.menu {
+	background: #202024;
+	padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include d(s) {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+}
+
+.menu-nav {
+    ul { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+            margin: 1em;
+        }
+    }
+    @include d(s) {
+        ul li {
+            margin: 0.1em;
+        }
+    }
+}
+
+.support-button {
+    background-color: #EF6F1E;
+    border-radius: 0.5em;
+    text-decoration: none;
+}

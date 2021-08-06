@@ -1,0 +1,46 @@
+.intro {
+    margin-top: 60px;
+    @include d(s) {
+        margin-top: 20px;
+    }
+}
+
+.logo-intro {
+    &>img {
+        width: 100%;
+        float: left;
+        margin-left: -100px;
+        margin-right: 100px;
+    }
+    @include d(s) {
+        width: 30%;
+        margin-left: 100px;
+    }
+}
+.intro-info {
+    margin-top: 60px;
+    float: right;
+    h1 {
+        margin: 20px 0px;
+        color: $secundary-color;
+        font-weight: bold;
+        font-size: 5em;
+    }
+    h2 {
+        margin: 20px 0px;
+        font-size: 3em;
+    }
+    p {
+        line-height: 2em;
+    }
+    @include d(s) {
+        width: 100%;
+    }
+}
+
+.separator {
+    height: 1px;
+    background: $secundary-color;
+    width: 30%;
+    margin: 50px auto;
+}
