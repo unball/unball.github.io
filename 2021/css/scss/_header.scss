@@ -1,5 +1,17 @@
+.container-header {
+    width: 100%;
+    background: #202024;
+    div {
+        max-width: 1200px;
+        margin: 0 auto;
+        @include d(s) {
+            max-width: 100%;
+            display: none;
+        }
+    }
+}
+
 .menu {
-	background: #202024;
 	padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -29,5 +41,4 @@
 .support-button {
     background-color: #EF6F1E;
     border-radius: 0.5em;
-    text-decoration: none;
 }

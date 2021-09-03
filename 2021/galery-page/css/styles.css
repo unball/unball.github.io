@@ -1,0 +1,460 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 10, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-1 {
+  width: calc(8.33333% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-2 {
+  width: calc(16.66667% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-3 {
+  width: calc(25% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-4 {
+  width: calc(33.33333% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-5 {
+  width: calc(41.66667% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-6 {
+  width: calc(50% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-7 {
+  width: calc(58.33333% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-8 {
+  width: calc(66.66667% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-9 {
+  width: calc(75% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-10 {
+  width: calc(83.33333% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-11 {
+  width: calc(91.66667% - 20px);
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.grid-12 {
+  width: calc(100% - 20px);
+}
+
+/* line 73, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+[class^="grid-"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 73, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+  [class^="grid-"] {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-1 {
+  margin-left: calc(8.33333% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-2 {
+  margin-left: calc(16.66667% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-3 {
+  margin-left: calc(25% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-4 {
+  margin-left: calc(33.33333% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-5 {
+  margin-left: calc(41.66667% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-6 {
+  margin-left: calc(50% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-7 {
+  margin-left: calc(58.33333% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-8 {
+  margin-left: calc(66.66667% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-9 {
+  margin-left: calc(75% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-10 {
+  margin-left: calc(83.33333% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-11 {
+  margin-left: calc(91.66667% + 10px);
+}
+
+/* line 80, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.offset-12 {
+  margin-left: calc(100% + 10px);
+}
+
+@media screen and (max-width: 759px) {
+  /* line 87, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+  .offset-1, .offset-2, .offset-3, .offset-4, .offset-5, .offset-6, .offset-7, .offset-8, .offset-9, .offset-10, .offset-11, .offset-12 {
+    margin-left: 0px;
+  }
+}
+
+/* line 117, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  position: relative;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  /* line 117, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  /* line 117, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+  .container {
+    max-width: 480px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* line 95, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.container::after, .container::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 133, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 133, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 95, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_grid.scss */
+.row::after, .row::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* line 1, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_general.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  background: #121214;
+  color: #E1E1E6;
+}
+
+/* line 9, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_general.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 13, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_general.scss */
+footer {
+  padding: 40px 0;
+  width: 100%;
+  background: #202024;
+}
+
+/* line 19, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_general.scss */
+h3 {
+  margin-bottom: 2.5em;
+}
+
+/* line 23, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_general.scss */
+a {
+  padding: 0.5em;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 1, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.container-header {
+  width: 100%;
+  background: #202024;
+}
+
+/* line 4, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.container-header div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 4, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+  .container-header div {
+    max-width: 100%;
+    display: none;
+  }
+}
+
+/* line 14, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.menu {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 14, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+  .menu {
+    flex-direction: column;
+    padding: 1em 0;
+  }
+}
+
+/* line 26, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.menu-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* line 30, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.menu-nav ul li {
+  margin: 1em;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 35, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+  .menu-nav ul li {
+    margin: 0.1em;
+  }
+}
+
+/* line 41, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_header.scss */
+.support-button {
+  background-color: #EF6F1E;
+  border-radius: 0.5em;
+}
+
+/* line 1, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_title.scss */
+.titles-sections {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* line 4, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_title.scss */
+.titles-sections h1 {
+  font-size: 5em;
+  font-family: 'Roboto', monospace;
+  margin-bottom: 20px;
+}
+
+/* line 9, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_title.scss */
+.titles-sections p {
+  font-size: 1.25em;
+}
+
+/* line 2, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-footer h3 {
+  color: #EF6F1E;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* line 7, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-footer p {
+  margin-bottom: 40px;
+  padding: 0.4em;
+  font-size: 1.125em;
+}
+
+/* line 12, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-footer .contact-description {
+  text-align: center;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 1, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+  .contact-footer {
+    text-align: center;
+    margin: 0 2em;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  /* line 20, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+  .contact-footer .separator {
+    height: 25vh;
+    width: 1px;
+    background: #EF6F1E;
+    margin: 10vh 0;
+  }
+}
+
+/* line 29, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-infos {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 29, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+  .contact-infos {
+    width: 100%;
+  }
+}
+
+/* line 39, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-icons {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-right: 1.5em;
+}
+
+@media screen and (max-width: 759px) {
+  /* line 39, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+  .contact-icons {
+    margin-right: -1.5em;
+  }
+}
+
+/* line 48, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.contact-icons img {
+  margin: 0 auto;
+}
+
+/* line 53, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.support-section {
+  text-align: center;
+}
+
+/* line 55, ../../Downloads/HTML & CSS/site-unball/galery-page/css/scss/_footer.scss */
+.support-section p {
+  font-size: 1.125em;
+}
+
+/*# sourceMappingURL=styles.css.map */

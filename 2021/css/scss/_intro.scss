@@ -32,6 +32,7 @@
     }
     p {
         line-height: 2em;
+        font-size: 1.125em;
     }
     @include d(s) {
         width: 100%;
@@ -42,5 +43,5 @@
     height: 1px;
     background: $secundary-color;
     width: 30%;
-    margin: 50px auto;
+    margin: 80px auto;
 }

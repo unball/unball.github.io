@@ -1,0 +1,44 @@
+.container-header {
+    width: 100%;
+    background: #202024;
+    div {
+        max-width: 1200px;
+        margin: 0 auto;
+        @include d(s) {
+            max-width: 100%;
+            display: none;
+        }
+    }
+}
+
+.menu {
+	padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include d(s) {
+        flex-direction: column;
+        padding: 1em 0;
+    }
+}
+
+.menu-nav {
+    ul { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+            margin: 1em;
+        }
+    }
+    @include d(s) {
+        ul li {
+            margin: 0.1em;
+        }
+    }
+}
+
+.support-button {
+    background-color: #EF6F1E;
+    border-radius: 0.5em;
+}
