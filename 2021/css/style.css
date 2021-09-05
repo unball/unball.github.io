@@ -1,0 +1,81 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: #242424;
+    overflow-x: hidden;
+}
+
+@keyframes blink-video {
+    0%   {filter: sepia();}
+    25%  {filter: sepia() invert();}
+    50%  {filter: sepia();}
+    75%  {filter: sepia() invert();}
+    100% {filter: sepia();}
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes banner-gradient-background {
+    0%   { background-position-y: 0px; }
+    50%  { background-position-y: 250px; }
+    100% { background-position-y: 500px; }
+}
+
+.full-screen-video {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: sepia();
+    opacity: 1;
+    animation: 
+        fade-out 1s linear 4s;
+}
+
+#logo-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(24, 24, 24) 35%, rgb(45, 45, 45) 100%);
+    animation: banner-gradient-background 10s linear infinite;
+}
+
+.banner-text-container {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s 0.5s;
+}
+
+.banner-text-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.results-text {
+    color: #ef6f1e;
+}
+
+.success-text {
+    color: #df4a01;
+}
